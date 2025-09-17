@@ -1,0 +1,511 @@
+@import url(./descktop.css) screen and (min-width: 900px);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #00010e;
+    color: white;
+}
+
+#linkDesck {
+    width: 0;
+    overflow: hidden;
+}
+
+header {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 0;
+    height: 50px;
+    background: rgba(0, 255, 255, 0.752);
+    z-index: 1;
+}
+
+.menu {
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.barra {
+    width: 40px;
+    background: #000000;
+    padding: 3px;
+    border-radius: 15px;
+    margin-right: 15px;
+    transition: .5s ease;
+}
+
+.clicado {
+    background-color: rgb(0, 0, 0) !important;
+}
+
+.clicado:nth-child(1) {
+    position: absolute;
+    top: 40%;
+    transform: rotate(-50deg);
+}
+
+.clicado:nth-child(2) {
+    opacity: 0;
+}
+
+.clicado:nth-child(3) {
+    position: absolute;
+    top: 40%;
+    transform: rotate(50deg);
+}
+
+ul {
+    position: absolute;
+    right: 0;
+    top: -100px;
+    list-style: none;
+}
+
+.links {
+    top: 49.3px;
+    background-color: rgba(80, 76, 98, 0.361);
+    height: 100vh;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.links a {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+/* seção inicial */
+
+#home {
+    background-image: url(./img/281223624363fdb3dce3cea688635473.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: -250px -110px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    position: relative;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #00010e);
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    text-align: center;
+    height: 60%;
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(70deg, rgb(1, 200, 255), rgb(9, 2, 113) 70%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.rolar {
+    border: 1px solid white;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    animation: seta infinite 5s ease;
+    transition: .5s linear;
+}
+
+.rolar:hover {
+    background-color: rgba(1, 255, 255, 0.443);
+}
+
+@keyframes seta {
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    25% {
+        transform: translate(0px, 25px);
+    }
+
+    50% {
+        transform: translate(0px, -25px);
+    }
+}
+
+.rolar img {
+    width: 50px;
+    transform: rotate(225deg);
+}
+
+/* sobre mim */
+
+#aboutMe {
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.myPhoto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.myPhoto img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: 0 1px;
+}
+
+.textMain {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 30px;
+    text-align: justify;
+}
+
+.textMain h1 {
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(70deg, #00f, #0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contatoMain {
+    padding: 8px 25px;
+    letter-spacing: 1.5px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #0ff;
+    border: 1px solid rgb(254, 254, 254);
+    transition: .5s ease;
+}
+
+.contatoMain:hover{
+    background-color: #0ff !important;
+    color: #000000 !important;
+    border: 1px solid black !important;
+}
+
+/* Projetos */
+#more {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#more h1 {
+    text-align: center;
+    font-size: 2rem;
+    background: linear-gradient(70deg, #00f, #0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#more a {
+    color: white;
+}
+
+.btnMore {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.btnMore button {
+    width: 27%;
+    padding: 5px 0;
+    border: 1px solid #0ff;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    transition: .4s linear;
+}
+
+.btnMore button:hover {
+    background-color: #0ff;
+    color: #000000;
+}
+
+.select {
+    background-color: #0ff !important;
+    color: #000000 !important;
+}
+
+.blockCards {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #0ff;
+    width: 150px;
+    height: 230px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* contato */
+
+#contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#contact h1 {
+    text-align: center;
+    background: linear-gradient(70deg, #00f, #0ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.canais {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.redes {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid gray;
+    width: 160px;
+    padding: 5px;
+    border-radius: 15px;
+    transition: .5s linear;
+}
+
+.redes:hover {
+    background-color: #0ff;
+    color: #000000;
+    transform: scale(1.1);
+}
+
+.redes img {
+    width: 45px;
+}
+
+/* footer */
+
+footer {
+    margin-top: 20px;
+    background-color: #03eeff;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px 25px 0 0;
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        position: absolute;
+        width: 0;
+    }
+
+    #linkDesck {
+        position: fixed;
+        top: 72%;
+        left: 20px;
+        z-index: 1;
+        background-color: #ffffff1c;
+        width: 60px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        justify-content: center;
+        gap: 5px;
+        border: 1px solid white;
+        border-radius: 25px;
+        backdrop-filter: blur(10px);
+        transition: .5s ease;
+    }
+
+    #linkDesck li a {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: white;
+    }
+
+    .linkDesckOn {
+        width: 200px !important;
+    }
+
+    .icons img {
+        width: 30px;
+    }
+
+    .icons {
+        border: 1px solid gray;
+        padding: 5px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        background: #0b0b0b;
+    }
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+
+    .iconsBorder::after,
+    .iconsBorder::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: conic-gradient(from var(--angle), transparent 30%, rgb(0, 225, 255));
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        z-index: -1;
+        border-radius: 50%;
+        padding: 4px;
+        animation: 2s spin linear infinite;
+    }
+
+    .iconsBorder::before {
+        filter: blur(80px);
+        opacity: 0.5;
+    }
+
+    @keyframes spin {
+        from {
+            --angle: 0deg;
+        }
+
+        to {
+            --angle: 360deg;
+        }
+    }
+
+    #home {
+        background-position: 0;
+        height: 100vh;
+    }
+
+    #aboutMe {
+        height: 87vh;
+        padding: 0 100px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .myPhoto {
+        order: 1;
+        width: 50%;
+        height: 100%;
+        align-items: center;
+    }
+
+    .textMain {
+        width: 50%;
+    }
+
+    .textMain h1 {
+        text-align: start;
+    }
+
+    .myPhoto img {
+        width: 370px;
+        height: 370px;
+    }
+
+    #more {
+        height: 90vh;
+        justify-content: right;
+        padding: 70px 0;
+    }
+
+    .card {
+        width: 230px;
+        height: 300px;
+        justify-content: space-around;
+    }
+
+    .card img {
+        height: 250px;
+    }
+
+    #contact {
+        height: 250px;
+        justify-content: space-around;
+    }
+
+    .canais a{
+        color: white;
+    }
+}
